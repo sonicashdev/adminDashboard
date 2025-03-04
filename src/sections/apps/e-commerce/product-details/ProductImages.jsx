@@ -80,7 +80,7 @@ export default function ProductImages({ product }) {
 
   useEffect(() => {
     setSelected(product && product?.image ? `${prodImage}/${product.image}` : '');
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, [product]);
 
   const [wishlisted, setWishlisted] = useState(false);

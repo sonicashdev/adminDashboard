@@ -62,7 +62,7 @@ export default function ProductDetails({ id }) {
     if (id && !productsLoading) {
       setProduct(products.filter((item) => item.id.toString() === id)[0] || products[0]);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, [id, productsLoading]);
 
   // product description tabs
@@ -77,7 +77,7 @@ export default function ProductDetails({ id }) {
     if (cart && cart.step > 2) {
       resetCart();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, [id]);
 
   const productImages = useMemo(() => <ProductImages product={product} />, [product]);

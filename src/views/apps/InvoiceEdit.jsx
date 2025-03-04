@@ -602,7 +602,7 @@ export default function EditInvoice({ id }) {
     if (id && !invoiceLoading) {
       seList(invoice.filter((item) => item.id.toString() === id)[0]);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, [id, invoiceLoading]);
 
   const loader = (

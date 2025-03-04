@@ -64,7 +64,7 @@ export default function ProductsPage() {
       resetCart();
     }
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, []);
 
   const [openFilterDrawer, setOpenFilterDrawer] = useState(true);
@@ -92,7 +92,7 @@ export default function ProductsPage() {
     if (!productsLoading) {
       filterData();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, [filter]);
 
   let productResult = [1, 2, 3, 4, 5, 6, 7, 8].map((item) => (

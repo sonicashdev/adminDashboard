@@ -185,7 +185,7 @@ export default function NavCollapse({ menu, level, parentId, setSelectedItems, s
       });
     }
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, [pathname, menu.children]);
 
   useEffect(() => {

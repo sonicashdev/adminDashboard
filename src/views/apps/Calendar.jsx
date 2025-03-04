@@ -47,7 +47,7 @@ export default function Calendar() {
       setCalendarView(newView);
     }
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, [matchDownSM]);
 
   // calendar toolbar events

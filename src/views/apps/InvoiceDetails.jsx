@@ -67,7 +67,7 @@ export default function Details({ id }) {
     if (id && !invoiceLoading) {
       seList(invoice.filter((item) => item.id.toString() === id)[0] || invoice[0]);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, [id, invoiceLoading]);
 
   const today = new Date(`${list?.date}`).toLocaleDateString('en-GB', {

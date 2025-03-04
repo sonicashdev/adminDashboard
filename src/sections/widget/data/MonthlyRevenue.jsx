@@ -124,7 +124,7 @@ export default function MonthlyRevenue() {
           );
         }
       }
-    ], // eslint-disable-next-line react-hooks/exhaustive-deps
+    ], 
     []
   );
 

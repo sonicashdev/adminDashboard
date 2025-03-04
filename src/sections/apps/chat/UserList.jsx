@@ -57,7 +57,7 @@ export default function UserList({ setUser, search, selectedUser }) {
       }
       setData(result);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, [loading, search]);
 
   if (loading)

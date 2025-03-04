@@ -72,7 +72,7 @@ export default function Payment({ checkout, onBack, onNext, removeProduct, editA
     if (checkout.step > 2) {
       setComplete(true);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, []);
 
   useEffect(() => {

@@ -107,7 +107,7 @@ export default function RelatedProducts({ id }) {
     if (!relatedProductsLoading) {
       setRelated(relatedProducts);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, [id, relatedProductsLoading]);
 
   let productResult = (

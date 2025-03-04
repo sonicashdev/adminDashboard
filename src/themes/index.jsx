@@ -35,7 +35,7 @@ export default function ThemeCustomization({ children }) {
 
   const themeTypography = useMemo(
     () => Typography(themeMode, fontFamily, theme),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
     [themeMode, fontFamily]
   );
   const themeCustomShadows = useMemo(() => CustomShadows(theme), [theme]);

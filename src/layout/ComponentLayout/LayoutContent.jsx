@@ -43,7 +43,7 @@ export default function LayoutContent({ children }) {
 
   useEffect(() => {
     handlerComponentDrawer(!matchDownMd);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, [matchDownMd]);
 
   return (

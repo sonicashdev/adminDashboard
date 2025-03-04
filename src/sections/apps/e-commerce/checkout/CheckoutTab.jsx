@@ -92,7 +92,7 @@ export default function CheckoutTab({ cart }) {
 
   useEffect(() => {
     setValue(cart.step > 2 ? 2 : cart.step);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, [cart.step]);
 
   const removeProduct = (id) => {

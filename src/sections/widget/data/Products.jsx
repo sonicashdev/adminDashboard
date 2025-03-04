@@ -263,7 +263,7 @@ export default function Products() {
           );
         }
       }
-    ], // eslint-disable-next-line react-hooks/exhaustive-deps
+    ], 
     []
   );
 

@@ -50,7 +50,7 @@ export default function DashboardLayout({ children }) {
     if (!miniDrawer) {
       handlerDrawerOpen(!downXL);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, [downXL]);
 
   if (menuMasterLoading) return <Loader />;

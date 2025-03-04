@@ -411,7 +411,7 @@ export default function List() {
           );
         }
       }
-    ], // eslint-disable-next-line react-hooks/exhaustive-deps
+    ], 
     []
   );
 
