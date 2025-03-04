@@ -4,8 +4,6 @@ import { useMemo } from 'react';
 // third-party
 import { v4 as UIDV4 } from 'uuid';
 
-// utils
-import { fetcher } from 'utils/axios';
 
 export const endpoints = {
   key: 'api/calendar/events',
@@ -15,7 +13,7 @@ export const endpoints = {
 };
 
 export function useGetEvents() {
-  const { data, isLoading, error, isValidating } = useSWR(endpoints.key, fetcher, {
+  const { data, isLoading, error, isValidating } = useSWR(endpoints.key,  {
     revalidateIfStale: false,
     revalidateOnFocus: false,
     revalidateOnReconnect: false

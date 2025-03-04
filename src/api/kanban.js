@@ -1,9 +1,6 @@
 import { useMemo } from 'react';
 import useSWR, { mutate } from 'swr';
 
-// utils
-import { fetcher } from 'utils/axios';
-
 const initialState = {
   selectedItem: false
 };
@@ -30,7 +27,7 @@ export const endpoints = {
 };
 
 export function useGetBacklogs() {
-  const { data, isLoading, error, isValidating } = useSWR(endpoints.key, fetcher, {
+  const { data, isLoading, error, isValidating } = useSWR(endpoints.key, {
     revalidateIfStale: false,
     revalidateOnFocus: false,
     revalidateOnReconnect: false

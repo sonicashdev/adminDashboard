@@ -1,9 +1,6 @@
 import useSWR, { mutate } from 'swr';
 import { useMemo } from 'react';
 
-// utils
-import { fetcher } from 'utils/axios';
-
 export const endpoints = {
   key: 'api/address',
   list: '/list', // server URL
@@ -13,7 +10,7 @@ export const endpoints = {
 };
 
 export function useGetAddress() {
-  const { data, isLoading, error, isValidating } = useSWR(endpoints.key + endpoints.list, fetcher, {
+  const { data, isLoading, error, isValidating } = useSWR(endpoints.key + endpoints.list, {
     revalidateIfStale: false,
     revalidateOnFocus: false,
     revalidateOnReconnect: false

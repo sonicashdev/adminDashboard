@@ -1,9 +1,6 @@
 import useSWR, { mutate } from 'swr';
 import { useMemo } from 'react';
 
-// utils
-import { fetcher, fetcherPost } from 'utils/axios';
-
 export const endpoints = {
   key: 'api/chat',
   list: '/users', // server URL
@@ -11,7 +8,7 @@ export const endpoints = {
 };
 
 export function useGetUsers() {
-  const { data, isLoading, error, isValidating } = useSWR(endpoints.key + endpoints.list, fetcher, {
+  const { data, isLoading, error, isValidating } = useSWR(endpoints.key + endpoints.list,  {
     revalidateIfStale: false,
     revalidateOnFocus: false,
     revalidateOnReconnect: false
@@ -34,7 +31,7 @@ export function useGetUsers() {
 export function useGetUserChat(userName) {
   const URL = [endpoints.key + endpoints.update, { user: userName, endpoints: 'chat' }];
 
-  const { data, isLoading, error, isValidating } = useSWR(URL, fetcherPost, {
+  const { data, isLoading, error, isValidating } = useSWR(URL,  {
     revalidateIfStale: false,
     revalidateOnFocus: false,
     revalidateOnReconnect: false

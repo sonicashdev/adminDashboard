@@ -4,7 +4,7 @@ import { useMemo } from 'react';
 import useSWR, { mutate } from 'swr';
 
 // project-imports
-import axios, { fetcher, fetcherPost } from 'utils/axios';
+import axios from 'axios';
 
 export const endpoints = {
   key: 'api/products',
@@ -15,7 +15,7 @@ export const endpoints = {
 };
 
 export function useGetProducts() {
-  const { data, isLoading, error, isValidating } = useSWR(endpoints.key + endpoints.list, fetcher, {
+  const { data, isLoading, error, isValidating } = useSWR(endpoints.key + endpoints.list,  {
     revalidateIfStale: true,
     revalidateOnFocus: true,
     revalidateOnReconnect: true
@@ -54,7 +54,7 @@ export async function productFilter(filter) {
 export function useGetReleatedProducts(id) {
   const URL = [endpoints.related, { id, endpoints: 'products' }];
 
-  const { data, isLoading, error, isValidating } = useSWR(URL, fetcherPost, {
+  const { data, isLoading, error, isValidating } = useSWR(URL,  {
     revalidateIfStale: false,
     revalidateOnFocus: false,
     revalidateOnReconnect: false
@@ -75,7 +75,7 @@ export function useGetReleatedProducts(id) {
 }
 
 export function useGetProductReviews() {
-  const { data, isLoading, error, isValidating } = useSWR(endpoints.review, fetcher, {
+  const { data, isLoading, error, isValidating } = useSWR(endpoints.review,  {
     revalidateIfStale: false,
     revalidateOnFocus: false,
     revalidateOnReconnect: false

@@ -1,9 +1,6 @@
 import useSWR, { mutate } from 'swr';
 import { useMemo } from 'react';
 
-// utils
-import { fetcher } from 'utils/axios';
-
 const countries = [
   { code: 'US', label: 'United States Dollar', currency: 'Dollar', prefix: '$' },
   { code: 'GB', label: 'United Kingdom Pound', currency: 'Pound', prefix: '£' },
@@ -30,7 +27,7 @@ export const endpoints = {
 };
 
 export function useGetInvoice() {
-  const { data, isLoading, error, isValidating } = useSWR(endpoints.key + endpoints.list, fetcher, {
+  const { data, isLoading, error, isValidating } = useSWR(endpoints.key + endpoints.list,  {
     revalidateIfStale: false,
     revalidateOnFocus: false,
     revalidateOnReconnect: false
