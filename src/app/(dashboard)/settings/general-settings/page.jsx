@@ -1,4 +1,4 @@
-import GeneralSettings from 'views/settings/generalSettings';
+import GeneralSettings from 'views/settings/GeneralSettings';
 // ===========================|| WIDGET - STATISTICS ||=========================== //
 
 export default function GeneralSettingsPage() {
