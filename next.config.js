@@ -23,7 +23,7 @@ const nextConfig = {
     NEXT_APP_JWT_SECRET: 'ikRgjkhi15HJiU78-OLKfjngiu',
     NEXT_APP_JWT_TIMEOUT: '86400',
     NEXTAUTH_SECRET_KEY: 'LlKq6ZtYbr+hTC073mAmAh9/h2HwMfsFo4hrfCx5mLg=',
-    NEXT_PUBLIC_API_URL: 'http://localhost:5000/api'
+    NEXT_PUBLIC_API_URL: 'http://wcggogocs4wosw8w404ocsss.167.86.86.179.sslip.io/api'
   }
 };
 
